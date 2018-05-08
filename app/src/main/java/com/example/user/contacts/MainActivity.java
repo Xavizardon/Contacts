@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        EspacioParaMenu = (TabLayout) findViewById(R.id.tablayout_contact_nginx);
-        EspacioParaFragmentos = (ViewPager) findViewById(R.id.viewpager_nginx);
+        EspacioParaMenu = (TabLayout) findViewById(R.id.tablayout);
+        EspacioParaFragmentos = (ViewPager) findViewById(R.id.viewpager);
         AdaptadorParaFragmentos = new ViewPagerAdapter(getSupportFragmentManager());
 
         AdaptadorParaFragmentos.AddFragment(new FragmentoContactos(),"Contactos");
@@ -28,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
         EspacioParaFragmentos.setAdapter(AdaptadorParaFragmentos);
 
         EspacioParaMenu.setupWithViewPager(EspacioParaFragmentos);
-
-        EspacioParaMenu.getTabAt(0).setIcon(R.drawable.ic_people_black_24dp);
-        EspacioParaMenu.getTabAt(1).setIcon(R.drawable.ic_star_black_24dp);
 
         ActionBar BarraDeAccion = getSupportActionBar();
         BarraDeAccion.setElevation(0);
